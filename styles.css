@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Base styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333; /* Default text color */
+    background-color: #f9f9f9; /* Light background for contrast */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Theme Colors */
+:root {
+    --primary-color: #6e1b3d; /* Violet-Wine Red */
+    --secondary-color: #8b2a4b; /* Darker Violet-Wine */
+    --highlight-color: #f39c12; /* Gold */
+    --background-color: #ffffff; /* White for sections */
+}
+
+/* Teal Theme */
+.teal-theme {
+    --primary-color: #00796b; /* Teal */
+    --secondary-color: #004d40; /* Darker Teal */
+    --highlight-color: #00ccff; /* Amber */
+}
+
+/* Gold Theme */
+.gold-theme {
+    --primary-color: #b8860b; /* Dark Golden Rod */
+    --secondary-color: #ffd700; /* Gold */
+    --highlight-color: #f39c12; /* Bright Gold */
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Center text for branding */
+}
+
+h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 2rem; /* Larger font for main title */
+    color: #ffffff; /* White text for contrast */
+}
+
+p {
+    margin: 0; /* Remove default margin */
+    font-size: 1rem; /* Smaller font for subtitle */
+    color: var(--highlight-color); /* Highlight color for subtitle */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center navigation items */
+    padding: 0;
+}
+
+nav a {
+    color: #ffffff; /* White text for links */
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px; /* Space between nav items */
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--highlight-color); /* Highlight on hover */
+}
+
+.hero {
+    background-color: var(--secondary-color);
+    padding: 50px;
+    text-align: center;
+    color: #ffffff; /* White text for contrast */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+main {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+section {
+    width: 100%;
+    max-width: 800px; 
+    background: var(--background-color); /* White background for content */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+}
+
+h2 {
+    color: var(--primary-color); /* Consistent heading color */
+}
+
+h3 {
+    color: var(--secondary-color); /* Secondary heading color */
+}
+
+button {
+    background-color: var(--highlight-color); /* Button color */
+    border: none;
+    padding: 10px 20px;
+    color: #ffffff; /* White text on buttons */
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #d68e00; /* Darker shade on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--primary-color); /* Dark violet-wine red */
+    color: #ffffff; /* White text for contrast */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 100%;
+    max-width: 400px;
+}
+
+input, textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%; 
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--highlight-color); /* Highlight border on focus */
+    outline: none;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #999; /* Placeholder text color */
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav a {
+        padding: 10px 0; /* Space between nav items */
+    }
+}
